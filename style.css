@@ -11,6 +11,7 @@ body {
     background-image: url('imgs/cassino.png');
     background-color: #ebebeb;
     background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     height: 97vh;
@@ -22,6 +23,7 @@ body {
     flex-direction: column;
     margin: 20px auto;
     width: 720px;
+    padding-bottom: 20px;
 }
 
 /* Estilo Topo */
@@ -184,7 +186,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
 }
 
 #extra-game button {
@@ -228,10 +230,6 @@ body {
 
 /* Responsividade Simples */
 @media (max-width: 768px) {
-    body {
-        height: 110vh;
-    }
-
     #social-medias i {
         font-size: 2.3em;
     }
@@ -261,13 +259,17 @@ body {
     #winloss {
         top: 65%;
     }
+
+    #extra-game {
+        margin: 0 auto 30px auto;
+    }
+
+    #container {
+        padding-bottom: 30px;
+    }
 }
 
 @media (max-width: 480px) {
-    body {
-        height: 115vh;
-    }
-
     #about-txt {
         margin-top: 10px;
     }
@@ -302,5 +304,13 @@ body {
 
     #winloss {
         top: 60%;
+    }
+
+    #extra-game {
+        margin: 0 auto 40px auto;
+    }
+
+    #container {
+        padding-bottom: 40px;
     }
 }
