@@ -221,6 +221,10 @@ body {
 
 /* Responsividade Simples */
 @media (max-width: 768px) {
+    body {
+        height: 110vh;
+    }
+
     #container {
         width: 95%;
     }
@@ -249,6 +253,10 @@ body {
 }
 
 @media (max-width: 480px) {
+    body {
+        height: 115vh;
+    }
+
     #about {
         flex-direction: column;
         text-align: center;
