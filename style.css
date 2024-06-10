@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url('/imgs/cassino.png');
+    background-image: url('imgs/cassino.png');
     background-color: #ebebeb;
     background-position: center;
     background-repeat: no-repeat;
