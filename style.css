@@ -29,7 +29,7 @@ body {
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #about h1 {
@@ -38,12 +38,19 @@ body {
 
 #about img {
     width: 100px;
-    margin-right: 40px;
 }
 
 #about p {
     margin-top: 5px;
     font-style: italic;
+}
+
+#social-medias i {
+    font-size: 2em;
+}
+
+#social-medias a:not(:last-child) {
+    margin-right: 10px;
 }
 
 /* Estilo Game Container */
@@ -225,6 +232,10 @@ body {
         height: 110vh;
     }
 
+    #social-medias i {
+        font-size: 2.3em;
+    }
+
     #container {
         width: 95%;
     }
@@ -255,6 +266,14 @@ body {
 @media (max-width: 480px) {
     body {
         height: 115vh;
+    }
+
+    #about-txt {
+        margin-top: 10px;
+    }
+
+    #social-medias {
+        margin-top: 20px;
     }
 
     #about {
