@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<!-- ENZO DUTRA 
+     43 984886475
+     enzo.dutra.work@gmail.com -->
+<body>
+    <div id="container">
+        <div id="about">
+            <img src="imgs/dice.png" alt="Dice Logo">
+            <div id="about-txt">
+                <h1>Enzo Dutra <br> Dice Game</h1>
+                <p>100% fair</p>
+            </div>
+        </div>
+        <div id="game-container">
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="pointer"></div>
+            <div id="pin">
+                <p id="result"></p>
+                <img src="imgs/pin.png" alt="Pin">
+            </div>
+            <div id="winloss">
+                <p id="winloss-txt"></p>
+            </div>
+        </div>
+        <div id="total">
+            <p id="balance-txt">Balance:</p>
+            <p id="balance"></p>
+        </div>
+        <div id="game-infos">
+            <form action="">
+                <label for="value" class="label-txt">Bet:</label>
+                <div id="regulator-bet">
+                    <input type="text" id="value" name="value" value="1">
+                    <button id="div2" type="button">½</button>
+                    <button id="x2" type="button">2x</button>
+                </div>
+                <label for="multiplier" class="label-txt">Multiplier:</label>
+                <input type="text" id="multiplier" name="multiplier" value="2">
+                <button id="submit" type="submit">Bet</button>
+            </form>
+            <div id="extra-game">
+                <button id="invertSide" onclick="invertSide()">Invert Side</button>
+                <button id="resetBalance" onclick="resetBalance()">Reset Balance</button>
+            </div>
+        </div>
+    </div>
+    <div id="error">
+        <p id="error-msg"></p>
+    </div>
+    <script src="logical.js"></script>
+</body>
+</html>

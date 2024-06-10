@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body {
+    background-image: url('/imgs/cassino.png');
+    background-color: #ebebeb;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 97vh;
+}
+
+/* Estilo do Container */
+#container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 720px;
+}
+
+/* Estilo Topo */
+#about {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about h1 {
+    font-size: 1.3em;
+}
+
+#about img {
+    width: 100px;
+    margin-right: 40px;
+}
+
+#about p {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Estilo Game Container */
+#game-container {
+    height: 300px;
+    margin: 50px 0 0 0;
+    background-color: #d8d8d8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 5px;
+}
+
+#line1 {
+    background-color: red;
+    width: 35%;
+    height: 7.5px;
+    border-radius: 5px 0 0 5px;
+    border: 0.1px solid black;
+}
+
+#line2 {
+    background-color: green;
+    width: 35%;
+    height: 7.5px;
+    border-radius: 0 5px 5px 0;
+    border: 0.1px solid black;
+}
+
+#pointer {
+    position: absolute; 
+    left: 49.75%;
+    height: 15px;
+    width: 5px;
+    background-color: #fff;
+    border: 0.1px solid black;
+}
+
+#pin {
+    position: absolute;
+    top: 94.5px;
+    left: 13.25%;
+    display: none;
+    transition: 0.3s all ease-in-out;
+}
+
+#pin img,
+#pin p {
+    margin: 0 auto;
+    width: 35px;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+/* Estilo do Balance */
+#total {
+    margin: 20px auto 0 auto;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#balance-txt {
+    font-weight: bold;
+}
+
+/* Informações do Value e Multiplier */
+#game-infos {
+    margin: 30px auto 0 auto;
+    width: 300px;
+}
+
+#game-infos form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.label-txt {
+    text-align: start;
+    width: 100%;
+    font-weight: 500;
+}
+
+#game-infos input {
+    height: 30px;
+    width: 300px;
+}
+
+#game-infos form input {
+    margin-bottom: 10px;
+}
+
+#submit {
+    width: 300px;
+    margin-top: 10px;
+    background-color: #d8d8d8;
+    border: 0.1px solid gray;
+    padding: 5px;
+}
+
+#regulator-bet {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#regulator-bet input {
+    width: 70%;
+}
+
+#regulator-bet button {
+    width: 11.5%;
+    height: 30px;
+    background-color: #d8d8d8;
+    border: 0.1px solid gray;
+}
+
+#div2 {
+    font-size: 1.3em;
+}
+
+#extra-game {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+#extra-game button {
+    width: 47%;
+    background-color: #d8d8d8;
+    border: 0.1px solid gray;
+    padding: 5px;
+}
+
+/* Mensagens da Página */
+#error {
+    width: 300px;
+    height: 80px;
+    background-color: #d86464;
+    position: absolute;
+    left: 1.25%;
+    top: 2.5%;
+    transition: 1s all ease-in-out;
+    text-align: center;
+    padding: 10px;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 0.5px solid #000;
+}
+
+#winloss {
+    position: absolute;
+    width: 33.333%;
+    left: 33.333%;
+    top: 70%;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.25s all ease-in-out;
+    font-weight: bold;
+}
+
+/* Responsividade Simples */
+@media (max-width: 768px) {
+    #container {
+        width: 95%;
+    }
+
+    #game-container {
+        height: 250px;
+    }
+
+    #pin {
+        top: 74.5px;
+    }
+
+    #pin img,
+    #pin p {
+        width: 30px;
+        font-size: 0.6em;
+    }
+
+    #submit, #regulator-bet button, #regulator-bet input, #game-infos input {
+        font-size: 0.9em;
+    }
+
+    #winloss {
+        top: 65%;
+    }
+}
+
+@media (max-width: 480px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #pin {
+        top: 54.5px;
+    }
+
+    #pin img,
+    #pin p {
+        width: 25px;
+        font-size: 0.5em;
+    }
+
+    #game-container {
+        height: 200px;
+    }
+
+    #winloss {
+        top: 60%;
+    }
+}
